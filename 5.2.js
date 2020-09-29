@@ -32,6 +32,7 @@ function askTvSerie(c=null){
     }else{
         aSerie.actors = randomizeCast(c);
     }
+    
     return aSerie;
 }
 

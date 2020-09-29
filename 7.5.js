@@ -1,7 +1,6 @@
 let array1 = [9,5,7,2,4,8];
 let array2 = [4,2,5,1,9,8];
 let array3 = [1,7,9,2,4,5];
-let result = [];
 
 function sortArray(anArray, count = 0){
     let pos = count;
