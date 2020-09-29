@@ -1,10 +1,10 @@
 const readlineSync = require("readline-sync");
-let favNumber = 0;
+let favNumber;
 
-while(favNumber != 42){
+do{
     favNumber = new Number(readlineSync.question('Your favorite number? '));
     
     if(favNumber != 42) console.log("Are you sure?");
-}
+}while(favNumber != 42)
 
 
