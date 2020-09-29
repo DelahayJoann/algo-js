@@ -23,4 +23,4 @@ function askTvSerie(){
 }
 
 
-console.log(JSON.stringify(askTvSerie()));
+console.log(JSON.parse(JSON.stringify(askTvSerie())));
