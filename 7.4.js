@@ -22,7 +22,7 @@ while(run){
         choice = readlineSync.question("Enter your action's number: ");
     }while(!((1 <= choice) && (choice <= 4)))
 
-    (choice == 1)? displayFlavors():'';1
+    (choice == 1)? displayFlavors():'';
     if(choice == 2){
         let add;
         do{
