@@ -1,7 +1,9 @@
 const readlineSync = require("readline-sync");
+const fs = require('fs');
+const flavorsFile = './flavors.json';
 let choice = 999999;
 let run = true;
-let pizzaFlavors = [];
+let pizzaFlavors = (fs.existsSync(flavorsFile))? JSON.parse(fs.readFileSync(flavorsFile)) : [];
 
 let displayFlavors = () =>{for(elem of pizzaFlavors){console.log("\n"+(pizzaFlavors.indexOf(elem)+1)+") "+elem);}}
 let addFlavor = (flavor) =>{(flavor != '')?pizzaFlavors.push(flavor):''; return flavor;}
@@ -32,4 +34,10 @@ while(run){
         removeFlavor(readlineSync.question("Enter the number of flavor you want to remove: "));
     }
     (choice == 4)? run=false: '';
+}
+
+saveFlavors(pizzaFlavors);
+
+function saveFlavors(flavors){
+    fs.writeFile(flavorsFile, JSON.stringify(flavors), function(error) { (error)?console.log(error):'';});
 }

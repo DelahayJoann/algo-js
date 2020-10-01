@@ -1,5 +1,11 @@
-const readlineSync = require("readline-sync");
 
 
-let userName = readlineSync.question('Can you give me your name please?');
-console.log("Hello " + userName);
+const User = {
+    name: 'Henrique',
+    yob: 1988,
+    age: 2020 - yob,
+    married: true,
+    job: 'developper'
+}
+
+console.log(User.age);
