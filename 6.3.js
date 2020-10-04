@@ -24,7 +24,7 @@ class Rectangle{
 function randomRectangle(n){
     let arrayOfRectangles = []
     for(i=0;i<n;i++){
-        arrayOfRectangles.push(new Rectangle( Math.trunc((Math.random()*100)+1), Math.trunc((Math.random()*100)+1), Math.trunc((Math.random()*100)+1), Math.trunc((Math.random()*100)+1) ));
+        arrayOfRectangles.push(new Rectangle( Math.trunc((Math.random()*100)+1), Math.trunc((Math.random()*100)+1), Math.trunc((Math.random()*10)+1), Math.trunc((Math.random()*10)+1) ));
         for(j=0;j<arrayOfRectangles.length-1;j++){
             if(arrayOfRectangles[arrayOfRectangles.length-1].collides(arrayOfRectangles[j])){
                 console.log("This rectangle "+arrayOfRectangles[arrayOfRectangles.length-1].info()+ "    collides with    "+arrayOfRectangles[j].info());
